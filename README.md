@@ -9,12 +9,65 @@ https://developer.apple.com/go/?id=app-dev-swift-student (Links to an external s
 
 
 Open the folder titled "2 - Introduction to UIKit" then open the folder titled "3 - Structures".  Open the Playground there, and work through the exercises.
+```swift
+struct GPS{
+var longitude = 0.0
+var latitude = 0.0
+}
+var somePlace = GPS()
+print(somePlace)
+somePlace = GPS(longitude: 0.125226, latitude: 51.514004)
+print(somePlace)
+
+struct Book{
+
+var title = ""
+var author = ""
+var pages = 0
+var prices = 0.0
+}
+
+var favoriteBook = Book(title: "Lightning Thief", author: "Rick Riordan", pages: 400, prices: 18.95)
+print("My favorite book \(favoriteBook.title) by \(favoriteBook.author) has \(favoriteBook.pages) pages and only cost as low as \(favoriteBook.prices)")
+```
 
 
 ## 2: Classes and Inheritance
 
 Open the folder titled "2 - Introduction to UIKit" then open the folder titled "4 - Classes and Inheritance".  Open the Playground there, and work through the exercises.
+```
+class Spaceship{
+var name: String
+var health = 100
+var position = 0
 
+init(name: String){
+self.name = name
+}
+func moveLeft(){
+self.position = position - 1
+}
+func moveRight(){
+self.position = position + 1
+}
+func wasHit(){
+self.health = health - 5
+if health <= 0{
+print("Sorry you ship was hit too many times")
+}
+}
+}
+let falcon = Spaceship(name: "Falcon")
+print(falcon.name)
+falcon.moveLeft()
+falcon.moveLeft()
+falcon.moveRight()
+print("position: \(falcon.position)")
+
+falcon.wasHit()
+falcon.wasHit()
+print("health: \(falcon.health)")
+```
 
 ## BONUS: Actor mini-project
 
