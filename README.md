@@ -319,6 +319,16 @@ print(defender.shieldStrength)
 print(defender.health)
 print(defender.name)
 ```
+```swift
+var falcon = Spaceship(name: "Falcon", health: 100, position: 0)
+var sameShip = falcon
+print(sameShip.position)
+print(sameShip.position)
+sameShip.moveLeft()
+print(sameShip.position)
+print(sameShip.position)
+// yes the positions are the same because it is a class and classes pass by reference so both values will change
+```
 
 ## BONUS: Actor mini-project
 
