@@ -164,10 +164,37 @@ print(test.likes)
 test.like()
 print(test.likes)
 ```
+```swift
+struct RunningWorkout {
+var distance: Double
+var time: Double
+var elevation: Double
+
+func postWorkOutStats(){
+print("Ran \(distance) meters within \(time) minutes and elevation at \(elevation)")
+}
+}
+
+let test = RunningWorkout(distance: 50.0, time: 5, elevation: 5.0)
+print(test.postWorkOutStats())
+
+struct Steps {
+var steps: Int
+var goal: Int
+
+mutating func takeStep(){
+steps += 1
+}
+}
+var walk = Steps(steps: 5, goal: 10)
+print(walk.steps)
+walk.takeStep()
+print(walk.steps)
+```
 ## 2: Classes and Inheritance
 
 Open the folder titled "2 - Introduction to UIKit" then open the folder titled "4 - Classes and Inheritance".  Open the Playground there, and work through the exercises.
-```
+```swift
 class Spaceship{
 var name: String
 var health = 100
